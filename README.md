@@ -31,5 +31,5 @@ rand_host = f'{rand_az()}{rand_AZ()}{rand_09()}{rand_az()}{rand_AZ()}{rand_09()}
 ## Example Prompt
 
 ```shell
-foo@sA1nJ5 ~/Desktop $
+foo@sA1nJ5:~/Desktop $
 ```
