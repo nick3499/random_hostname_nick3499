@@ -19,7 +19,7 @@ def rand_09():
 def rand_hostname():
     '''Set psuedo-random system hostname.'''
     rand_host = f'{rand_az()}{rand_AZ()}{rand_09()}{rand_az()}{rand_AZ()}{rand_09()}'
-    run(['sudo', 'hostnamectl', 'set-hostname', rand_host])
+    run(['sudo', 'hostnamectl', 'set-hostname', rand_host], check=True)
 
 if __name__ == '__main__':
     rand_hostname()
