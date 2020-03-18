@@ -6,15 +6,15 @@ from subprocess import run
 
 def rand_az():
     '''Return random character: a...z'''
-    return chr(randrange(97, 123))
+    return chr(randrange(97, 123, 1))
 
 def rand_AZ():
     '''Return random character: A...Z'''
-    return chr(randrange(65, 92))
+    return chr(randrange(65, 91, 1))
 
 def rand_09():
     '''Return random character: 0...9'''
-    return chr(randrange(48, 58))
+    return chr(randrange(48, 58, 1))
 
 def rand_hostname():
     '''Set psuedo-random system hostname.'''
