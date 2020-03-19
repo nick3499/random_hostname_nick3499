@@ -16,7 +16,7 @@ from subprocess import run
 ```
 
 - `random.randrange()` returns a random integer within a specific range.
-- `subprocess.run()` executes command line arguments in Bash from Python.
+- `subprocess.run()` executes Bash command described by args from Python.
 
 ## `rand_host`
 
@@ -28,8 +28,19 @@ rand_host = f'{rand_az()}{rand_AZ()}{rand_09()}{rand_az()}{rand_AZ()}{rand_09()}
 
 `rand_host` would contain something akin to `mV4jA8`, as each embedded expression returns a character. See _Example Prompt_ section.
 
+## subprocess.run()
+
+After the script is done juggling and playing slight of hand with characters, `rand_host` is passed as an arg to `hostnamectl` through the `subprocess.run()` method.
+
+```python
+run(['sudo', 'hostnamectl', 'set-hostname', rand_host], check=True)
+```
+
+- `subprocess.run()` runs `hostnamectl` in Bash, waits for `hostnamectl` to finish, then returns a `CompletedProcess` instance.
+- `check=True` captures `stdout` or `stderr`.
+
 ## Example Prompt
 
 ```shell
-foo@sA1nJ5:~/Desktop $
+foo@sA1nJ5 ~/Desktop $
 ```
