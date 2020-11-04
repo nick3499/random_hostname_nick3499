@@ -50,3 +50,4 @@ rand_host = f'{rand_az()}{rand_AZ()}{rand_09()}{rand_az()}{rand_AZ()}{rand_09()}
 ```shell
 foo@sA1nJ5:~/Desktop $
 ```
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R6R72LISM)
